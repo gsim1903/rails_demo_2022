@@ -21,6 +21,10 @@ Bundler.require(*Rails.groups)
 
 module RailsDemo2022
   class Application < Rails::Application
+#  initalizer(:remove_activestorage_routes, after: :add_routingpaths) do
+ #   app.routes_reloader.paths.delete_if { |path| path =~/activestorage|active_model}
+
+
     config.load_defaults 6.1
     config.api_only = true
     config.generators do |generate|
