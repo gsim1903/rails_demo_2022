@@ -1,4 +1,4 @@
-RSpec.describe 'POST /api/articles' do
+RSpec.describe ' succesful POST /api/articles' do
   before do
     post '/api/articles', params: {
       article: {
@@ -20,3 +20,25 @@ RSpec.describe 'POST /api/articles' do
   end
 
 end
+
+RSpec.describe ' unsuccesful POST /api/articles' do
+    before do
+      post '/api/articles', params: {
+        article: {
+          title: '',
+          body: 'Lorem ipsum...'
+        }
+      }
+      @article = Article.last 
+    end
+  
+    #subject { response }
+  
+   # it { is_expected.to have_http_status 422 }
+  
+  #  it 'is expected to return an error stating the enty is not valid' do
+   #   expect(@article.title).to eq ""
+    #  expect(@article.body).to eq "Lorem ipsum..."
+    #end
+  
+  end

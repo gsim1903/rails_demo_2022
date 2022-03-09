@@ -14,6 +14,8 @@ class Api::ArticlesController < ApplicationController
     render json: { article: new_article }, status: 201
   end
 
+  
+
   #def delete; end
 
   #def update; end
