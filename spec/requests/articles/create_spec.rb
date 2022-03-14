@@ -25,6 +25,10 @@ RSpec.describe ' succesful POST /api/articles' do
     expect(@article.image.attached?).to eq true 
   end
 
+  it "is expected to attach an image to the article" do
+    expect(@article.image).to be_attached
+  end
+
 end
 
 RSpec.describe ' unsuccesful POST /api/articles' do
