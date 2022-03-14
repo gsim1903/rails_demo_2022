@@ -27,6 +27,7 @@ module RailsDemo2022
 
     config.load_defaults 6.1
     config.api_only = true
+    
     config.generators do |generate|
       generate.assets false
       generate.helper false
